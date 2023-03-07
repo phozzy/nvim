@@ -1,6 +1,13 @@
 return {
   {
+    "ray-x/guihua.lua",
+    build = "cd lua/fzy && make",
+  },
+  {
     "ray-x/go.nvim",
+    dependencies = {
+      "ray-x/guihua.lua",
+    },
     config = true,
     event = { "CmdlineEnter" },
     ft = { "go", "gomod" },
